@@ -1,4 +1,5 @@
 import Sidebar from "@/components/sidebar";
+import MobileNav from "@/components/MobileNav";
 
 
 
@@ -11,9 +12,18 @@ export default function RootLayout({
     const loggedIn = { firstName: 'Leanon', lastName: 'Brown' };
 
     return (
-      <main className="flex h-screen w-full font-inter">
-          <Sidebar user={loggedIn} />
+      <><main className="flex h-screen w-full font-inter">
+        <Sidebar user={loggedIn} />
+        <div className="flex size-full flex-col">
+          <div className="root-layout">
+          
+            <div>
+              <MobileNav user={loggedIn} />
+            </div>
+          </div>
           {children}
-      </main>
+        </div>
+      </main></>
+      
     );
   }
