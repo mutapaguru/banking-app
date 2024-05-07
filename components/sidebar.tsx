@@ -30,7 +30,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
 
           return (
             <Link href={item.route} key={item.label}
-              className={cn('sidebar-link', { 'bg-bank-gradient': isActive })}
+              className={cn('sidebar-link', { 'bg-sky-800': isActive })}
             >
               <div className="relative size-6">
                 <Image 
@@ -42,7 +42,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
                   })}
                 />
               </div>
-              <p className={cn("sidebar-label", { "!text-white": isActive })}>
+              <p className={cn("sidebar-label text-black", { "!text-white": isActive })}>
                 {item.label}
               </p>
             </Link>
