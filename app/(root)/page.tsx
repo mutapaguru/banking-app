@@ -14,7 +14,11 @@ function Home() {
            user={loggedIn?.firstName || 'Guest'}
             subtext="Access and manage your account and transactions efficiently."
           />
-          <TotalBalance />
+          <TotalBalance 
+            accounts={[]}
+            totalBanks={1}
+            totalCurrentBalance={250}
+          />
             </header>
             </div>
     </section>
