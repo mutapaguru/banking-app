@@ -3,6 +3,8 @@ import Link from 'next/link'
 import React from 'react'
 // import BankCard from './BankCard'
 import { countTransactionCategories } from '@/lib/utils'
+import Category from './Category'
+import BankCard from './BankCard'
 //import Category from './Category'
 
 const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
@@ -44,7 +46,7 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
           </Link>
         </div>
 
-       {/* {banks?.length > 0 && (
+        {banks?.length > 0 && (
           <div className="relative flex flex-1 flex-col items-center justify-center gap-5">
             <div className='relative z-10'>
               <BankCard 
@@ -65,17 +67,17 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
               </div>
             )} 
           </div>
-        )} */}
+        )} 
 
         <div className="mt-10 flex flex-1 flex-col gap-6">
           <h2 className="header-2">Top categories</h2>
 
-         {/* <div className='space-y-5'>
+          <div className='space-y-5'>
             {categories.map((category, index) => (
               <Category key={category.name} category={category} />
             ))}
           </div>
-        */}
+        
         </div>
       </section>
     </aside>
